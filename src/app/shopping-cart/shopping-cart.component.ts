@@ -1,3 +1,4 @@
+import { ShoppingCart } from './../models/shopping-cart';
 import { ShoppingCartService } from './../shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,4 +16,7 @@ export class ShoppingCartComponent implements OnInit {
     this.cart$ = await this.cartService.getCart();
   }
 
+  clearCart() {
+    this.cartService.clearCart();
+  }
 }
